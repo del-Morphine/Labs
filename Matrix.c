@@ -18,6 +18,12 @@ int main()
     scanf("%d", &n);
     scanf("%d", &m);
  
+    if(m <= 0 || n <= 0)
+    {
+        perror("Неверная размерность");
+        return 1;
+    }
+ 
     int **matr = create_matrix(n, m);
     rand_matrix(matr, n, m);
     print_matrix(matr, n, m);
